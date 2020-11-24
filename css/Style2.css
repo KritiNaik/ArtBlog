@@ -1,0 +1,249 @@
+@import url('../css/fonts.css');
+:root {
+    --white: #afafaf;
+    --red: #e31b23;
+    --bodyColor: #292a2b;
+    --borderFormEls: hsl(0, 0%, 10%);
+    --bgFormEls: hsl(0, 0%, 14%);
+    --bgFormElsFocus: hsl(0, 7%, 20%);
+    --midnight: #104f55;
+
+    /*gradient color*/
+
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+   /*theme font family*/
+   --Abel: 'Abel', cursive;
+   --Anton: 'Anton', cursive;
+   --Josefin : 'Josefin', cursive;
+   --Lexend: 'Lexend', cursive;
+   --Livvic : 'Livvic', cursive;
+}
+body{
+    background-image: url(../pictures/IMG_1575.JPG);
+    background-repeat: no-repeat;
+    
+}
+.my-form .container{
+    background-color: #ea9a96;
+    background: transparent;
+}
+   
+  * {
+    padding: 0;
+    margin: 100;
+    box-sizing: border-box;
+    outline: none;
+  }
+   
+  a {
+    color: inherit;
+  }
+   
+  input,
+  select,
+  textarea,
+  button {
+      
+    font-family: var(--Livvic);
+    font-size: 100%; 
+    
+  }
+   
+  button,
+  label {
+    cursor: pointer;
+  }
+   
+  select {
+    appearance: none;
+  }
+   
+  select::-ms-expand {
+    display: none;
+  }
+   
+  select:-moz-focusring {
+    color: transparent !important;
+    text-shadow: 0 0 0 var(--white);
+  }
+   
+  textarea {
+    resize: none;
+  }
+   
+  ul {
+    list-style: none;
+  }
+  /*CUSTOM VARIABLES HERE*/
+
+.container{
+    font-family: var(--Josefin);
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+  width: 70%;
+  line-height: 1;
+  padding: 15px 15px;
+  border: 1px solid var(--borderFormEls);
+
+  background-color: white;
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+ 
+.my-form textarea {
+  height: 150px;
+}
+ 
+.my-form ::placeholder {
+  color: inherit;
+  opacity: .5;
+}
+/*CUSTOM VARIABLES HERE*/
+ 
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:focus {
+  background: #f8b24f;
+}
+ 
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus {
+  transform: scale(1.02);
+}
+.my-form *:required,
+.my-form select {
+  background-repeat: no-repeat;
+  
+  background-position: center right 12px;
+  background-size: 15px 15px;
+}
+ 
+.my-form *:required {
+    background-color: white ;
+  background-image: url(../pictures/asterisk_64px.png);  
+}
+/*checkbox*/
+
+
+.my-form input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+
+  /*CUSTOM VARIABLES HERE*/
+ 
+.my-form input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    padding-left: 2rem;
+    color: white;
+    font-family: var(--Lexend);
+    transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  }
+   
+  .my-form input[type="checkbox"]:focus + label {
+    background: var(--sky);
+  }
+   
+  .my-form input[type="checkbox"] + label::before,
+  .my-form input[type="checkbox"] + label::after {
+    content: '';
+    position: absolute;
+  }
+   
+  .my-form input[type="checkbox"] + label::before {
+    left: 0;
+    top: 6px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--white);
+  }
+   
+  .my-form input[type="checkbox"]:checked + label::before {
+    background: var(--red);
+  }
+   
+  .my-form input[type="checkbox"]:checked + label::after {
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    height: 14px;
+    border-bottom: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    transform: rotate(45deg);
+  }
+   
+  @media screen and (min-width: 541px) {
+    .my-form input[type="checkbox"] + label::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+     
+    .my-form input[type="checkbox"]:checked + label::after {
+      top: 3px;
+    }
+  }
+  .my-form *:disabled {
+    cursor: default;
+    filter: blur(2px);
+  }
+ 
+/*CUSTOM VARIABLES HERE*/
+ 
+.my-form .btn-grid {
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.2s;
+  }
+   
+  .my-form button:enabled:hover,
+  .my-form button:focus {
+    background: var(--sky);
+  }
+   
+  .my-form button > * {
+    display: inline-block;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+   
+  .my-form button .back {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-110%, -50%);
+  }
+   
+  .my-form button:enabled:hover .back,
+  .my-form button:focus .back {
+    transform: translate(-50%, -50%);
+  }
+   
+  .my-form button:enabled:hover .front,
+  .my-form button:focus .front {
+    transform: translateX(110%);
+  }
+  @media screen and (min-width: 600px) {
+    .my-form .grid {
+      display: grid;
+      grid-gap: 2rem;
+    }
+     
+    .my-form .grid-2 {
+      grid-template-columns: 1fr 1fr;   
+    }
+   
+    .my-form .grid-3 {
+      grid-template-columns: auto auto auto;
+      align-items: center;
+    }
+  }

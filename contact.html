@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="./css/Style2.css">
+</head>
+<body><center>
+    <form class="my-form" style= width:700px>
+    <div class="container">
+      <h1>Get in touch!</h1>
+      <ul>
+        <li>
+            <div class="grid grid-2">
+                <input type="text"  placeholder="Name" required>  
+                <input type="text" placeholder="Surname" required><br>
+            </div>
+        </li>    
+        <li>
+            <div class="grid grid-2">
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone"><br>
+            </div>
+        </li>    
+        <li>
+            <textarea placeholder="Message" style= width:600px></textarea><br><br>
+        </li>   
+        <li>
+        <input type="checkbox" id="terms">
+        <label for="terms">I have read and agreed with the <a href="#">Terms and conditions</a></label> <br><br>
+        </li>
+        <li>
+            <div class="grid grid-3">
+                <div class="required-msg"></div>
+                <button class="btn-grid"  type="submit" style= width:280px disabled>
+                  <span class="back">
+                    <img src="./pictures/sent_64px.png" alt="">
+                  </span>
+                  <span class="front">SUBMIT</span>
+                </button>
+                <button class="btn-grid" type="reset" style= width:280px disabled>
+                  <span class="back">
+                    <img src="./pictures/eraser_64px.png" alt="">
+                  </span>
+                  <span class="front">RESET</span>
+                </button> 
+                <br>
+             </div>
+        </li>    
+       
+      </ul>
+    </div>
+    
+
+  </form>
+  </center>
+  <script src="./js/main2.js"></script>
+  </body>
